@@ -35,7 +35,7 @@ const SITE_CONFIG = {
     { code: "CRTP",   name: "Certified Red Team Professional",      issuer: "Altered Security" },
     { code: "CRTO",   name: "Certified Red Team Operator",          issuer: "Zero-Point Security" },
     { code: "CRTO II",name: "Certified Red Team Operator II",       issuer: "Zero-Point Security" },
-    { code: "CRTE",   name: "Certified Red Team Expert",            issuer: "Altered Security" }
+    { code: "CARTE",  name: "Certified Azure Red Team Expert",     issuer: "Altered Security" }
   ],
 
   // Kill-chain style skill stages. Each "stage" is a real phase of an
