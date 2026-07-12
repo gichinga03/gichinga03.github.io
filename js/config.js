@@ -22,9 +22,9 @@ const SITE_CONFIG = {
     "My work centers on adversary emulation — foothold, privilege escalation, lateral movement, and persistence — practiced in live lab ranges and documented like production engagements. I'm currently building toward full-time and remote red team roles across Kenya and internationally."
   ],
 
-  email: "your.email@example.com",          // TODO: replace
-  github: "https://github.com/your-handle", // TODO: replace
-  linkedin: "https://linkedin.com/in/your-handle", // TODO: replace
+  email: "gichinga03@example.com",          // TODO: replace
+  github: "https://github.com/gichinga03", // TODO: replace
+  linkedin: "https://linkedin.com/in/gichinga03", // TODO: replace
   twitter: "",                               // optional, leave blank to hide
   // Path to your resume PDF. Drop your file at assets/resume.pdf (same
   // filename) and it'll work as-is. Set to "" to hide the resume button/link entirely.
