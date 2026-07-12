@@ -1,96 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Cyber Security Professional</title>
-    <style>
-        /* Modern, clean typography and spacing */
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #f8fafc; /* Soft off-white */
-            color: #334155; /* Slate gray text */
-            line-height: 1.6;
-            padding: 40px 20px; 
-        }
-        .container { max-width: 750px; margin: 0 auto; }
-        
-        /* Header and Navigation */
-        header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            border-bottom: 2px solid #e2e8f0; 
-            padding-bottom: 20px;
-            margin-bottom: 40px; 
-        }
-        h1 { font-size: 1.5rem; color: #0f172a; font-weight: 700; margin: 0; }
-        nav a { color: #475569; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        nav a:hover { color: #1e40af; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maxwell Gichinga Mwaura — Offensive Security Engineer</title>
+<meta name="description" content="Portfolio of Maxwell Gichinga Mwaura — offensive security engineer specializing in Active Directory red teaming, based in Nairobi, Kenya.">
 
-        /* Sections */
-        section { margin-bottom: 45px; }
-        h2 { font-size: 1.25rem; color: #0f172a; border-left: 3px solid #1e40af; padding-left: 10px; margin-bottom: 20px; }
-        p { color: #475569; }
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230A0E13%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 fill=%22%23E8A33D%22 text-anchor=%22middle%22 font-family=%22monospace%22>&gt;</text></svg>">
 
-        /* Project & Blog Lists */
-        .item-list { list-style: none; padding: 0; }
-        .item-line { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; }
-        .item-title { font-weight: 600; color: #1e40af; text-decoration: none; }
-        .item-title:hover { text-decoration: underline; }
-        .item-desc { font-size: 0.95rem; color: #64748b; margin: 4px 0 0 0; }
-        .date { font-size: 0.85rem; color: #94a3b8; font-variant-numeric: tabular-nums; }
-    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Your Name</h1>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#blog">Blog</a>
-            </nav>
-        </header>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a Cyber Security professional specializing in security engineering and risk analysis. I build secure systems, analyze vulnerabilities, and document my findings to contribute to the wider defensive security community.</p>
-        </section>
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="nav-logo"><span class="dot"></span><span id="nav-handle">0x4D67</span></div>
+    <nav class="nav-links">
+      <a href="#about" data-index="01">about</a>
+      <a href="#skills" data-index="02">skills</a>
+      <a href="#writeups" data-index="03">writeups</a>
+      <a href="#projects" data-index="04">projects</a>
+      <a href="#contact" data-index="05">contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</header>
 
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <ul class="item-list">
-                <li style="margin-bottom: 20px;">
-                    <div class="item-line">
-                        <a href="#" class="item-title">Enterprise Active Directory Homelab</a>
-                        <span class="date">GitHub</span>
-                    </div>
-                    <p class="item-desc">Designed and deployed a secure, monitored network environment using pfSense, Windows Server, and Splunk for threat detection.</p>
-                </li>
-                <li>
-                    <div class="item-line">
-                        <a href="#" class="item-title">Automated Log Parser</a>
-                        <span class="date">Python</span>
-                    </div>
-                    <p class="item-desc">A lightweight script designed to parse SIEM logs and automatically flag anomalous IP addresses using threat intelligence feeds.</p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="blog">
-            <h2>Technical Write-ups</h2>
-            <ul class="item-list">
-                <li class="item-line">
-                    <a href="#" class="item-title">Analyzing the Impact of Modern Ransomware on SMBs</a>
-                    <span class="date">July 2026</span>
-                </li>
-                <li class="item-line">
-                    <a href="#" class="item-title">Hardening Linux Servers: A Practical Guide</a>
-                    <span class="date">June 2026</span>
-                </li>
-            </ul>
-        </section>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal in">
+      <div class="hero-kicker"><span class="blink"></span> AVAILABLE FOR RED TEAM &amp; PENTEST ROLES</div>
+      <h1 id="hero-name">Maxwell Gichinga<br><span class="accent">Mwaura</span></h1>
+      <p class="lede" id="hero-tagline">I break Active Directory environments for a living — then write down exactly how, so defenders can close the gap.</p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+        <!-- resume button injected here by main.js if resumeUrl is set -->
+      </div>
+      <div class="hero-meta" id="hero-meta">
+        <span><strong>Based in</strong> Nairobi, Kenya</span>
+        <span><strong>Focus</strong> AD Red Teaming</span>
+        <span><strong>Status</strong> University of Nairobi, CS '27</span>
+      </div>
     </div>
+
+    <div class="hero-visual reveal in">
+      <div class="hero-visual-head">
+        <span class="tab"></span><span class="tab"></span><span class="tab"></span>
+        <span style="margin-left:6px;">attack-path.svg — bloodhound-style trust graph</span>
+      </div>
+
+      <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#3A4552"></path>
+          </marker>
+          <marker id="arrowAmber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="#E8A33D"></path>
+          </marker>
+        </defs>
+
+        <!-- static edges -->
+        <line x1="70" y1="230" x2="180" y2="150" stroke="#3A4552" stroke-width="1.4" marker-end="url(#arrow)"/>
+        <line x1="180" y1="150" x2="300" y2="90"  stroke="#E8A33D" stroke-width="1.8" marker-end="url(#arrowAmber)" stroke-dasharray="5 4" class="flow-edge"/>
+        <line x1="300" y1="90"  x2="430" y2="60"  stroke="#E8A33D" stroke-width="1.8" marker-end="url(#arrowAmber)" stroke-dasharray="5 4" class="flow-edge"/>
+        <line x1="180" y1="150" x2="120" y2="80"  stroke="#3A4552" stroke-width="1.4" marker-end="url(#arrow)"/>
+        <line x1="300" y1="90"  x2="360" y2="180" stroke="#3A4552" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+        <!-- edge labels -->
+        <text x="200" y="130" font-family="JetBrains Mono, monospace" font-size="9" fill="#E8A33D">S4U2Proxy</text>
+        <text x="320" y="70" font-family="JetBrains Mono, monospace" font-size="9" fill="#E8A33D">Forest Trust</text>
+        <text x="60" y="115" font-family="JetBrains Mono, monospace" font-size="9" fill="#5E6C7C">Kerberoast</text>
+
+        <!-- nodes -->
+        <g>
+          <circle cx="70" cy="230" r="16" fill="#171F29" stroke="#3A4552" stroke-width="1.4"/>
+          <text x="70" y="234" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#8B99AA">USR</text>
+          <text x="70" y="256" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#5E6C7C">workstation01</text>
+        </g>
+
+        <g>
+          <circle cx="180" cy="150" r="16" fill="#171F29" stroke="#3A4552" stroke-width="1.4"/>
+          <text x="180" y="154" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#8B99AA">SQL</text>
+          <text x="180" y="176" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#5E6C7C">sql01.dublin</text>
+        </g>
+
+        <g>
+          <circle cx="120" cy="80" r="14" fill="#171F29" stroke="#3A4552" stroke-width="1.4"/>
+          <text x="120" y="84" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#8B99AA">DC</text>
+        </g>
+
+        <g>
+          <circle cx="300" cy="90" r="16" fill="#171F29" stroke="#E8A33D" stroke-width="1.8"/>
+          <text x="300" y="94" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#E8A33D">DC01</text>
+          <text x="300" y="116" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#5E6C7C">dublin.contoso.com</text>
+        </g>
+
+        <g>
+          <circle cx="360" cy="180" r="14" fill="#171F29" stroke="#3A4552" stroke-width="1.4"/>
+          <text x="360" y="184" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#8B99AA">FS</text>
+        </g>
+
+        <g>
+          <circle cx="430" cy="60" r="18" fill="#171F29" stroke="#E8A33D" stroke-width="2"/>
+          <circle cx="430" cy="60" r="18" fill="none" stroke="#E8A33D" stroke-width="1" opacity="0.5" class="pulse-ring"/>
+          <text x="430" y="64" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#E8A33D">ENC</text>
+          <text x="430" y="86" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#5E6C7C">contoso.enclave</text>
+        </g>
+      </svg>
+
+      <div class="terminal">
+        <div><span class="prompt">$</span> <span id="typewriter"></span><span class="cursor"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section id="about">
+  <div class="container">
+    <div class="eyebrow">01 / About</div>
+    <div class="about-grid">
+      <div class="about-copy reveal" id="about-copy">
+        <!-- injected from config.js -->
+      </div>
+      <div class="fact-list" id="fact-list">
+        <!-- injected from config.js -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CERTIFICATIONS
+     ============================================================ -->
+<section id="certs">
+  <div class="container">
+    <div class="eyebrow">02 / Certifications</div>
+    <h2>Credentials earned through hands-on exams</h2>
+    <p class="section-intro">Each of these is a timed, practical, network-based assessment — not a multiple-choice test. Scores reflect real compromise chains against live environments.</p>
+    <div class="cert-grid" id="cert-grid">
+      <!-- injected from config.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS / KILL CHAIN
+     ============================================================ -->
+<section id="skills">
+  <div class="container">
+    <div class="eyebrow">03 / How I Work</div>
+    <h2>An engagement, stage by stage</h2>
+    <p class="section-intro">Every assessment follows the same arc — from first foothold to full domain compromise. This is the lens I bring to labs, exams, and real engagements alike.</p>
+
+    <div class="chain" id="chain-grid">
+      <!-- injected from config.js -->
+    </div>
+
+    <div class="toolkit-row">
+      <div class="toolkit-label">Toolkit</div>
+      <div class="chips" id="toolkit-chips">
+        <!-- injected from config.js -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WRITEUPS
+     ============================================================ -->
+<section id="writeups">
+  <div class="container">
+    <div class="eyebrow">04 / Writeups &amp; Research</div>
+    <h2>Notes from the lab</h2>
+    <p class="section-intro">Engagement-style writeups and field notes. Add new entries in <span class="mono">js/writeups.js</span> — no HTML editing required.</p>
+
+    <div class="writeup-list" id="writeup-list">
+      <!-- injected from writeups.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section id="projects">
+  <div class="container">
+    <div class="eyebrow">05 / Projects</div>
+    <h2>Selected work</h2>
+    <p class="section-intro">Tools and side projects. Add new entries in <span class="mono">js/projects.js</span> — no HTML editing required.</p>
+
+    <div class="project-grid" id="project-grid">
+      <!-- injected from projects.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section id="contact" class="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="eyebrow">06 / Contact</div>
+      <h2>Let's talk.</h2>
+      <p>Open to red team, penetration testing, and adversary emulation roles — in Kenya or remote. Reach out directly or find me on the links below.</p>
+    </div>
+    <div class="contact-links" id="contact-links">
+      <!-- injected from config.js -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span id="footer-name">Maxwell Gichinga Mwaura</span>
+    <span>built with static HTML — hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/projects.js"></script>
+<script src="js/writeups.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
