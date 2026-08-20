@@ -168,6 +168,7 @@ header.nav {
 
 .nav-links a { transition: color 0.15s ease; }
 .nav-links a:hover { color: var(--amber); }
+.nav-links a.current { color: var(--amber); }
 
 .nav-links a::before {
   content: attr(data-index);
@@ -777,3 +778,272 @@ footer {
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 .reveal.in { opacity: 1; transform: translateY(0); }
+
+/* ==========================================================
+   GENERIC EMPTY STATE (projects / notes / tools / writeups)
+   ========================================================== */
+.empty-state {
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  color: var(--muted-2);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  grid-column: 1 / -1;
+}
+
+/* ==========================================================
+   SUBPAGE HERO (projects.html / writeups.html / azure.html / project.html)
+   ========================================================== */
+.page-hero {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.page-hero .eyebrow { margin-bottom: 14px; }
+
+.page-hero h1 {
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  color: var(--muted);
+  font-size: 16.5px;
+  max-width: 620px;
+}
+
+/* ==========================================================
+   HOMEPAGE "EXPLORE" LINK-OUT CARDS
+   ========================================================== */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 760px) {
+  .explore-grid { grid-template-columns: 1fr; }
+}
+
+.explore-card {
+  display: block;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 22px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.explore-card:hover {
+  border-color: var(--amber-dim);
+  transform: translateY(-2px);
+}
+
+.explore-card .idx {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-2);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.explore-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.explore-card p {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-bottom: 14px;
+}
+
+.explore-card .project-link { font-size: 12.5px; }
+
+/* ==========================================================
+   PROJECT DETAIL PAGE (project.html)
+   ========================================================== */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 32px;
+  transition: color 0.15s ease;
+}
+.back-link:hover { color: var(--amber); }
+
+.detail-head { margin-bottom: 36px; }
+
+.detail-badges {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.badge.status { color: var(--muted); }
+
+.detail-head h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 18px;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.detail-body {
+  max-width: 680px;
+  margin-bottom: 36px;
+}
+
+.detail-body p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.detail-body p:last-child { margin-bottom: 0; }
+
+.detail-highlights {
+  max-width: 680px;
+  margin-bottom: 36px;
+}
+
+.detail-highlights ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detail-highlights li {
+  font-size: 14.5px;
+  color: var(--muted);
+  padding-left: 16px;
+  position: relative;
+}
+
+.detail-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 8px;
+  width: 6px; height: 1px;
+  background: var(--amber);
+}
+
+.detail-actions { margin-top: 8px; }
+
+/* ==========================================================
+   TABS (azure.html: Notes / Tools / Writeups)
+   ========================================================== */
+.tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--line-soft);
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s ease;
+}
+
+.tab-btn::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  background: transparent;
+}
+
+.tab-btn:hover { color: var(--text); }
+
+.tab-btn.active { color: var(--amber); }
+.tab-btn.active::after { background: var(--amber); }
+
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* ==========================================================
+   AZURE: NOTES
+   ========================================================== */
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.note-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 6px;
+  padding: 22px;
+}
+
+.note-category {
+  font-size: 11.5px;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.note-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.note-body {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================
+   AZURE: TOOLS
+   ========================================================== */
+.tool-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line-soft);
+}
+
+.tool-row {
+  display: block;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--line-soft);
+  transition: background 0.15s ease;
+}
+
+a.tool-row:hover { background: var(--surface); }
+.tool-row.disabled { cursor: default; }
+
+.tool-name {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.tool-description {
+  color: var(--muted);
+  font-size: 13.5px;
+  margin-bottom: 10px;
+  max-width: 620px;
+}

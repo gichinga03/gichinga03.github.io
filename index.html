@@ -24,9 +24,10 @@
     <nav class="nav-links">
       <a href="#about" data-index="01">about</a>
       <a href="#skills" data-index="02">skills</a>
-      <a href="#writeups" data-index="03">writeups</a>
-      <a href="#projects" data-index="04">projects</a>
-      <a href="#contact" data-index="05">contact</a>
+      <a href="writeups.html" data-index="03">writeups</a>
+      <a href="projects.html" data-index="04">projects</a>
+      <a href="azure.html" data-index="05">azure</a>
+      <a href="#contact" data-index="06">contact</a>
     </nav>
     <a href="#contact" class="nav-cta">Get in touch</a>
   </div>
@@ -42,7 +43,7 @@
       <h1 id="hero-name">Maxwell Gichinga<br><span class="accent">Mwaura</span></h1>
       <p class="lede" id="hero-tagline">I break Active Directory environments for a living — then write down exactly how, so defenders can close the gap.</p>
       <div class="hero-actions" id="hero-actions">
-        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="projects.html" class="btn btn-primary">View projects</a>
         <a href="#contact" class="btn btn-ghost">Contact</a>
         <!-- resume button injected here by main.js if resumeUrl is set -->
       </div>
@@ -179,31 +180,33 @@
 </section>
 
 <!-- ============================================================
-     WRITEUPS
+     EXPLORE — link-out strip to the dedicated pages
      ============================================================ -->
-<section id="writeups">
+<section id="explore">
   <div class="container">
-    <div class="eyebrow">04 / Writeups &amp; Research</div>
-    <h2>Notes from the lab</h2>
-    <p class="section-intro">Engagement-style writeups and field notes. Add new entries in <span class="mono">js/writeups.js</span> — no HTML editing required.</p>
+    <div class="eyebrow">04 / More</div>
+    <h2>Dig deeper</h2>
+    <p class="section-intro">Projects, writeups, and CARTE/Azure notes each get their own space rather than living on one long page.</p>
 
-    <div class="writeup-list" id="writeup-list">
-      <!-- injected from writeups.js -->
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     PROJECTS
-     ============================================================ -->
-<section id="projects">
-  <div class="container">
-    <div class="eyebrow">05 / Projects</div>
-    <h2>Selected work</h2>
-    <p class="section-intro">Tools and side projects. Add new entries in <span class="mono">js/projects.js</span> — no HTML editing required.</p>
-
-    <div class="project-grid" id="project-grid">
-      <!-- injected from projects.js -->
+    <div class="explore-grid">
+      <a href="projects.html" class="explore-card reveal">
+        <span class="idx">01</span>
+        <h3>Projects</h3>
+        <p>Tools and backend work — PentestReporter, a custom C# C2, GreenHarvest, and more.</p>
+        <span class="project-link">Browse projects</span>
+      </a>
+      <a href="writeups.html" class="explore-card reveal">
+        <span class="idx">02</span>
+        <h3>Writeups</h3>
+        <p>Engagement-style notes from CRTO/CRTO2 labs and exams — AD attack chains, OPSEC, tooling debug logs.</p>
+        <span class="project-link">Read writeups</span>
+      </a>
+      <a href="azure.html" class="explore-card reveal">
+        <span class="idx">03</span>
+        <h3>Azure / CARTE</h3>
+        <p>Notes, tooling, and writeups from CARTE study — Entra ID, hybrid identity, Conditional Access, PIM abuse.</p>
+        <span class="project-link">View Azure page</span>
+      </a>
     </div>
   </div>
 </section>
@@ -214,7 +217,7 @@
 <section id="contact" class="contact">
   <div class="container contact-grid">
     <div>
-      <div class="eyebrow">06 / Contact</div>
+      <div class="eyebrow">05 / Contact</div>
       <h2>Let's talk.</h2>
       <p>Open to red team, penetration testing, and adversary emulation roles — in Kenya or remote. Reach out directly or find me on the links below.</p>
     </div>
@@ -234,6 +237,9 @@
 <script src="js/config.js"></script>
 <script src="js/projects.js"></script>
 <script src="js/writeups.js"></script>
+<script src="js/azure-notes.js"></script>
+<script src="js/azure-tools.js"></script>
+<script src="js/azure-writeups.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

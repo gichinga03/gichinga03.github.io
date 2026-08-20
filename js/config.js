@@ -71,6 +71,6 @@ const SITE_CONFIG = {
   // Free-form tool chips shown under "Toolkit"
   toolkit: [
     "Cobalt Strike", "BloodHound", "Rubeus", "Mimikatz", "PowerView",
-    "Impacket", "Burp Suite", "Nmap", "C#", "Python", "PowerShell"
+    "Impacket", "Burp Suite", "Nmap", "C#", "Python", "PowerShell", "GO"
   ]
 };

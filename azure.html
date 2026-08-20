@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Azure / CARTE — Maxwell Gichinga Mwaura</title>
+<meta name="description" content="Azure and Entra ID red team notes, tools, and writeups from Maxwell Gichinga Mwaura's CARTE study — hybrid identity attacks, Conditional Access bypass, PIM abuse.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230A0E13%22/><text x=%2250%22 y=%2266%22 font-size=%2260%22 fill=%22%23E8A33D%22 text-anchor=%22middle%22 font-family=%22monospace%22>&gt;</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <div class="nav-logo"><span class="dot"></span><span id="nav-handle">0x4D67</span></div>
+    <nav class="nav-links">
+      <a href="index.html#about" data-index="01">about</a>
+      <a href="index.html#skills" data-index="02">skills</a>
+      <a href="writeups.html" data-index="03">writeups</a>
+      <a href="projects.html" data-index="04">projects</a>
+      <a href="azure.html" data-index="05">azure</a>
+      <a href="index.html#contact" data-index="06">contact</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Azure / CARTE</div>
+    <h1>Azure &amp; Entra ID red teaming</h1>
+    <p>Notes, tooling, and writeups from working toward CARTE (Certified Azure Red Team Expert) — hybrid identity attacks, Conditional Access bypass, PIM abuse, and cloud OPSEC discipline.</p>
+  </div>
+</section>
+
+<section id="azure-content">
+  <div class="container" data-tab-group>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab-target="notes">Notes</button>
+      <button class="tab-btn" data-tab-target="tools">Tools</button>
+      <button class="tab-btn" data-tab-target="writeups">Writeups</button>
+    </div>
+
+    <div class="tab-panel active" data-tab-panel="notes">
+      <div class="note-grid" id="azure-notes-grid">
+        <!-- injected from azure-notes.js -->
+      </div>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="tools">
+      <div class="tool-list" id="azure-tools-list">
+        <!-- injected from azure-tools.js -->
+      </div>
+    </div>
+
+    <div class="tab-panel" data-tab-panel="writeups">
+      <div class="writeup-list" id="azure-writeup-list">
+        <!-- injected from azure-writeups.js -->
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span id="footer-name">Maxwell Gichinga Mwaura</span>
+    <span>built with static HTML — hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/azure-notes.js"></script>
+<script src="js/azure-tools.js"></script>
+<script src="js/azure-writeups.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

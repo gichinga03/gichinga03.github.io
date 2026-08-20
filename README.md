@@ -1,17 +1,42 @@
 # Portfolio Site
 
-A single-page portfolio site — static HTML/CSS/JS, no build step, ready for GitHub Pages.
+A multi-page portfolio site — static HTML/CSS/JS, no build step, ready for GitHub Pages.
+
+## Pages
+
+```
+index.html       Home — hero, about, certifications, skills, an "explore" strip, contact
+projects.html    Projects hub — a card grid of everything in js/projects.js
+project.html     Single project template. Which project shows is decided by a URL
+                 query param, e.g. project.html?slug=pentestreporter — you never
+                 create a new HTML file for a new project, just add it to
+                 js/projects.js with a unique `slug`
+writeups.html    Full writeups list, from js/writeups.js
+azure.html       Azure / CARTE page — Notes / Tools / Writeups tabs, backed by
+                 js/azure-notes.js, js/azure-tools.js, js/azure-writeups.js
+```
+
+Every page shares the same nav, footer, css/style.css, and js/main.js — you shouldn't
+need to touch any of the HTML files for normal content updates, only the data files below.
 
 ## File structure
 
 ```
-index.html          the page structure (you shouldn't need to edit this)
-css/style.css        all styling
-js/config.js         YOUR INFO: name, bio, socials, certifications, skills, resume path
-js/projects.js        YOUR PROJECTS: add/edit/remove project cards here
-js/writeups.js         YOUR WRITEUPS: add/edit/remove writeup/blog entries here
-js/main.js             renders config.js + projects.js + writeups.js (rarely needs edits)
-assets/               put resume.pdf (and any other static files) here
+index.html, projects.html, project.html, writeups.html, azure.html
+                        the page shells (you shouldn't need to edit these)
+css/style.css           all styling
+js/config.js            YOUR INFO: name, bio, socials, certifications, skills, resume path
+js/projects.js          YOUR PROJECTS: add/edit/remove project cards here (each needs
+                         a unique `slug` — that's what project.html?slug=... looks up)
+js/writeups.js          YOUR WRITEUPS: add/edit/remove general writeup/blog entries here
+js/azure-notes.js       YOUR AZURE NOTES: short CARTE/Entra ID study notes
+js/azure-tools.js       YOUR AZURE TOOLS: cloud-specific tooling, separate from the
+                         general toolkit chips in config.js
+js/azure-writeups.js    YOUR AZURE WRITEUPS: full writeups specific to Azure/Entra ID
+js/main.js              renders every data file into the DOM (rarely needs edits —
+                         every render function checks for its target element first,
+                         so this one file works safely across all five pages)
+assets/                 put resume.pdf (and any other static files) here
 ```
 
 ## Editing your content
@@ -24,17 +49,28 @@ the `PROJECTS` array, then edit the fields:
 
 ```js
 {
+  slug: "new-tool-name",      // unique, no spaces — becomes project.html?slug=new-tool-name
   title: "New Tool Name",
   summary: "One or two sentences on what it does and why it's interesting.",
   tags: ["Python", "Active Directory"],
-  type: "tool",              // "tool" | "writeup" | "research"
+  type: "tool",                // "tool" | "writeup" | "research"
+  status: "",                  // optional, e.g. "In development"
   link: "https://github.com/you/repo",
   linkLabel: "View on GitHub",
-  featured: false             // true = visually highlighted card
+  featured: false,              // true = visually highlighted card on the hub
+  details: ["Longer paragraph one.", "Longer paragraph two."], // optional, shown
+                                                                 // on the project page
+  highlights: ["Key point one", "Key point two"]                // optional bullet list
 }
 ```
 
-Save the file — the project grid rebuilds automatically, no other changes needed.
+Save the file — the projects hub grid and the project's own page (`project.html?slug=...`)
+both rebuild automatically. No new HTML file needed per project.
+
+**To add Azure/CARTE content:** open `js/azure-notes.js`, `js/azure-tools.js`, or
+`js/azure-writeups.js` and add an object to the relevant array (each file has its
+field reference in a comment at the top). The Notes / Tools / Writeups tabs on
+`azure.html` rebuild automatically.
 
 **To add a writeup:** open `js/writeups.js` and copy one of the existing objects inside
 the `WRITEUPS` array:
