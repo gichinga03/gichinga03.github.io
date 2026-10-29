@@ -237,8 +237,9 @@ function renderWriteupList(data, containerId) {
       <div class="writeup-arrow">${hasLink ? "→" : "soon"}</div>
     `;
 
+        const isExternal = hasLink && /^https?:\/\//i.test(w.link);
     return hasLink
-      ? `<a class="writeup-row" href="${w.link}" target="_blank" rel="noopener noreferrer">${inner}</a>`
+      ? `<a class="writeup-row" href="${w.link}"${isExternal ? ' target="_blank" rel="noopener noreferrer"' : ''}>${inner}</a>`
       : `<div class="writeup-row disabled">${inner}</div>`;
   }).join("");
 }
