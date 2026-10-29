@@ -1,0 +1,4 @@
+{
+  "description": "Enumerating an Azure Key Vault, pulling the key name via PowerShell, and using Invoke-AzKeyVaultKeyOperation to decrypt a provided ciphertext and recover the flag.",
+  "tags": ["azure", "key-vault", "powershell", "crypto"]
+}

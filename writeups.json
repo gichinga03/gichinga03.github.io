@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "keyVault-15",
+    "title": "Key Vault 15",
+    "date": "2026-10-29",
+    "excerpt": "Enumerating an Azure Key Vault, pulling the key name via PowerShell, and using Invoke-AzKeyVaultKeyOperation to decrypt a provided ciphertext and recover the flag.",
+    "tags": [
+      "azure",
+      "key-vault",
+      "powershell",
+      "crypto"
+    ],
+    "category": "azure",
+    "link": "azure-writeups/keyVault-15/Key%20Vault%2015%203feb23a1fcd5806fb781c07cabc94510.html"
+  },
+  {
+    "slug": "55758628-5090-4751-8e3c-6d972b867dc9_ExportBlock-d184c9a9-d7bc-4e3e-9464-0fff203b456a",
+    "title": "KIOPTRIX",
+    "date": "2026-10-29",
+    "excerpt": "Full attack chain on Kioptrix Level 1 — nmap/gobuster enumeration, a Samba trans2open RCE via Metasploit, and post-exploitation server enumeration.",
+    "tags": [
+      "linux",
+      "samba",
+      "metasploit",
+      "pnpt"
+    ],
+    "category": "writeups",
+    "link": "writeups/55758628-5090-4751-8e3c-6d972b867dc9_ExportBlock-d184c9a9-d7bc-4e3e-9464-0fff203b456a/KIOPTRIX%2029db23a1fcd58024a66ad03b88a1cb5f.html"
+  }
+]

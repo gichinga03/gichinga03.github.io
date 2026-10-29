@@ -1,0 +1,167 @@
+/* ==========================================================
+   WRITEUP THEME OVERRIDE
+   Restyles raw Notion HTML exports to match the site's dark
+   theme. Loaded AFTER Notion's own inline <style> block (the
+   build script injects this link right before </head>, so
+   normal cascade order — not !important — is what wins here).
+   Uses the same tokens as css/style.css.
+   ========================================================== */
+
+:root {
+  --bg:        #0A0E13;
+  --surface:   #121820;
+  --surface-2: #171F29;
+  --line:      #232E3B;
+  --line-soft: #1A222C;
+
+  --text:      #E7EDF3;
+  --muted:     #8B99AA;
+  --muted-2:   #5E6C7C;
+
+  --amber:     #E8A33D;
+  --amber-dim: #8A6528;
+  --teal:      #3FC9B0;
+  --red:       #E5575C;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body:    'Inter', 'Segoe UI', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+
+  --radius: 3px;
+}
+
+html, body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body {
+  max-width: 760px;
+  margin: 0 auto !important;
+  padding: 72px 28px 96px !important;
+  font-family: var(--font-body) !important;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+/* -------- back link (injected by the build script) -------- */
+.writeup-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+.writeup-back:hover { color: var(--amber); }
+
+/* -------- headings -------- */
+h1, h2, h3, h4,
+.page-title {
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  color: var(--text) !important;
+}
+
+.page-title {
+  font-size: clamp(30px, 4vw, 42px) !important;
+  margin-bottom: 8px !important;
+}
+
+h1 { font-size: 26px !important; margin-top: 44px !important; }
+h2 { font-size: 20px !important; margin-top: 34px !important; }
+h3 { font-size: 17px !important; margin-top: 28px !important; }
+
+/* -------- body text -------- */
+p, li, .page-description {
+  color: var(--muted) !important;
+}
+
+strong { color: var(--text); }
+
+a, a.visited {
+  color: var(--amber) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--amber-dim);
+}
+a:hover { text-decoration-color: var(--amber); }
+
+/* -------- inline code -------- */
+code {
+  background: var(--surface-2) !important;
+  color: var(--teal) !important;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  font-family: var(--font-mono) !important;
+}
+
+/* -------- code blocks (terminal output etc.) -------- */
+pre.code, .code {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 6px !important;
+  padding: 18px !important;
+  overflow-x: auto;
+}
+
+pre.code code, .code > code {
+  background: none !important;
+  border: none;
+  color: var(--text) !important;
+  white-space: pre !important;
+  word-break: normal !important;
+}
+
+/* -------- blockquotes -------- */
+blockquote {
+  border-left: 3px solid var(--amber) !important;
+  color: var(--muted) !important;
+}
+
+/* -------- horizontal rules -------- */
+hr {
+  border-bottom: 1px solid var(--line-soft) !important;
+}
+
+/* -------- tables -------- */
+table, th, td {
+  border-color: var(--line-soft) !important;
+}
+
+.simple-table-header-color {
+  background: var(--surface-2) !important;
+  color: var(--text) !important;
+}
+
+td { color: var(--muted) !important; }
+
+/* -------- callouts -------- */
+.callout {
+  background: var(--surface-2) !important;
+  border: 1px solid var(--line) !important;
+  color: var(--muted) !important;
+}
+
+/* -------- images: framed card rather than inverted
+   (screenshots keep their real colors; the frame keeps a
+   bright screenshot from looking like a jarring white hole) -------- */
+figure.image {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  margin: 1.5em 0 !important;
+}
+figure.image img {
+  border-radius: 3px;
+}
+
+/* -------- tags/highlight colored backgrounds Notion sets -------- */
+[class^="highlight-"], [class*=" highlight-"],
+[class^="block-color-"], [class*=" block-color-"] {
+  background: transparent !important;
+  color: var(--muted) !important;
+}

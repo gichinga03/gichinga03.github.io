@@ -1,0 +1,4 @@
+{
+  "description": "Full attack chain on Kioptrix Level 1 — nmap/gobuster enumeration, a Samba trans2open RCE via Metasploit, and post-exploitation server enumeration.",
+  "tags": ["linux", "samba", "metasploit", "pnpt"]
+}
